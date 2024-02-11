@@ -1,0 +1,30 @@
+:root {
+    --hamburger-color: #D84282;
+}
+
+.hamburger {
+    width: 30px; /* Breedte van het hamburger icoon */
+    height: 3px; /* Hoogte van de middelste balk */
+    background-color: var(--hamburger-color);
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    width: 100%; /* Dezelfde breedte als het basis-element */
+    height: 3px; /* Dezelfde hoogte als het basis-element */
+    background-color: var(--hamburger-color);
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -10px; /* Afstand tot boven het basis-element */
+}
+
+.hamburger::after {
+    bottom: -10px; /* Afstand tot onder het basis-element */
+}
